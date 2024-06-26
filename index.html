@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;">
+    
+
+    <script>
+        class House {
+            constructor(colour, door, ferese, roof) {
+                this.colour = colour,
+                this.door = door,
+                this.window = ferese,
+                this.roof = roof
+            }
+            brag(){
+                return(`My house is painted ${this.colour} while the roof is painted ${this.roof}`)
+            }
+        }
+
+
+        let mujeeb = new House('White', 'mahogany', 'aluminum', 'red')
+        let okiki = new House('green', 'plywood', 'fresh air', 'white')
+        console.log(mujeeb, okiki);
+        if(mujeeb.door !== "mahogany") {
+            console.log(mujeeb.brag())
+        } else {
+            console.log(okiki.brag());
+        }
+
+        class Person {
+            constructor (nomenclature, height, complexion, balance, fine) {
+                this.nomenclature = nomenclature,
+                this.height = height,
+                this.complexion = complexion,
+                this.bankBal = balance,
+                this.isFine = fine
+            }
+            signUp() {
+                alert(`Welcome ${this.nomenclature}`)
+            }
+        }
+
+        class SuperPerson extends Person {
+            constructor(weapon, ability, nomenclature) {
+                super(nomenclature)
+                this.weapon = weapon,
+                this.ability = ability
+            }
+        }
+
+        let spiderman = new SuperPerson('Web', 'Jump', 'Spiderman')
+        console.log(spiderman);
+    </script>
+</body>
+</html>
